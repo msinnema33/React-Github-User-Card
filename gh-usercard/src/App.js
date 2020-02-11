@@ -43,17 +43,21 @@ class App extends React.Component {
         <h1>My GitHub Community</h1>
         <h2>{this.state.user.name}</h2>
         <img width='200' src={this.state.user.avatar_url} />
+        <p>{this.state.user.bio}</p>
         <h3>My repositories: {this.state.user.repos_url}</h3>
-        <button onClick={this.getFollowers}>Get My Followers</button>
+        <h4>Date Joined:  {this.state.user.created_at}</h4>
+        <p>Followers: {this.state.user.followers}</p>
+        <p>Following: {this.state.user.following}</p>
+        <button onClick={this.getFollowers}>See My Followers</button>
       </header>
       
         
         <div className='followers'>
           {this.state.followers.map(follower => (
             <img width='200' src={follower.avatar_url} key={follower.id}/>
-          ))}
+            ))}
           <p>{this.state.followers.login}</p>
-          
+         
         </div>
 
     </div>
