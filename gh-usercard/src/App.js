@@ -40,20 +40,20 @@ class App extends React.Component {
   return (
     <div className="App">
       <header className="App-header">
-        GitHub User 
-        Welcome: {this.state.user.name};
-        <img src={this.state.user.avatar_url} />
+        <h1>My GitHub Community</h1>
+        <h2>{this.state.user.name}</h2>
+        <img width='200' src={this.state.user.avatar_url} />
+        <h3>My repositories: {this.state.user.repos_url}</h3>
+        <button onClick={this.getFollowers}>Get My Followers</button>
       </header>
-      <button onClick={this.getFollowers}>Get My Followers</button>
-        My Followers
+      
+        
         <div className='followers'>
           {this.state.followers.map(follower => (
-            <img src={follower.avatar_url} key={follower.id}>
-
-            </img>
-            
+            <img width='200' src={follower.avatar_url} key={follower.id}/>
           ))}
-          Name:
+          <p>{this.state.followers.login}</p>
+          
         </div>
 
     </div>
