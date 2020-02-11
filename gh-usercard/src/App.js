@@ -47,6 +47,12 @@ class App extends React.Component {
       <button onClick={this.getFollowers}>Get My Followers</button>
         My Followers
         <div className='followers'>
+          {this.state.followers.map(follower => (
+            <img src={follower.avatar_url} key={follower.id}>
+
+            </img>
+            
+          ))}
           Name:
         </div>
 
