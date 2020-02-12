@@ -48,17 +48,21 @@ class App extends React.Component {
         <h4>Date Joined:  {this.state.user.created_at}</h4>
         <p>Followers: {this.state.user.followers}</p>
         <p>Following: {this.state.user.following}</p>
-        <button onClick={this.getFollowers}>See My Followers</button>
+        <button className='clickme' onClick={this.getFollowers}>See My Followers</button>
       </header>
       
         
         <div className='followers'>
           {this.state.followers.map(follower => (
+            <div className='followcard'>
             <img width='200' src={follower.avatar_url} key={follower.id}/>
-            ))}
-          <p>{this.state.followers.login}</p>
-         
+            <p>{follower.login}</p>
+            <p>{follower.repos_url}</p>
+
+          </div>
+          ))}
         </div>
+
 
     </div>
   );

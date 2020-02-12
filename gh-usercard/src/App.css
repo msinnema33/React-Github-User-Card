@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  width: 100%;
 }
 
 .App-logo {
@@ -23,9 +24,33 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+  .clickme {
+    border-radius: 5px;
+    margin: 1%;
+    padding: 1%;
+  }
 
 .App-link {
   color: #61dafb;
+}
+
+.followers {
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1%;
+  padding: 1%;
+  align-items: center;
+  justify-content: center;
+}
+
+.followcard {
+  border: 2px solid green;
+  border-radius: 5px;
+  margin: 1%;
+  padding: 1%;
+
 }
 
 @keyframes App-logo-spin {
